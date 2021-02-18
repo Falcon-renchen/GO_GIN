@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hello</title>
+</head>
+<body>
+<h1>u的信息：</h1>
+   <p>姓名：{{ .u.Name}}</p>
+    <p>性别：{{ .u.Gender }}</p>
+    <p>年龄：{{ .u.Age }}</p>
+<br>
+<h1>m的信息</h1>
+<p>姓名：{{ .m.Name }}</p>
+<p>性别：{{ .m.Gender }}</p>
+<p>年龄：{{ .m.Age }}</p>
+
+<h2>自定义变量</h2>
+<p>{{ $v1 := 100 }}</p>
+<p>{{ $age := .m.Age }}</p>
+<hr>
+<hr>
+{{if $v1}}
+{{$v1}}
+{{else}}
+啥都没有
+{{end}}
+<hr>
+<hr>
+{{ if lt .m.Age 25 }}
+好好上学
+{{else}}
+好好工作
+{{end}}
+<hr>
+{{ range $idx, $hobby := .hobby }}
+    <p>{{$idx}}-{{$hobby}}</p>
+{{end}}
+{{index .hobby 2}}
+</body>
+</html>

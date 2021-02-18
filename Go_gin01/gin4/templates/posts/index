@@ -1,0 +1,11 @@
+{{define "posts/index.tmpl"}}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+{{ .title }}
+</body>
+</html>
+{{end}}
